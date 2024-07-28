@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Indie+Flower&family=Inter:wght@100..900&family=Rowdies:wght@300;400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Figtree", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}
+.blog-preview-card {
+  border: 1px solid black;
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 2px hsl(0, 0%, 7%);
+}
+@media (min-width: 720px) {
+  .blog-preview-card {
+    width: 380px;
+  }
+}
+.blog-preview-card__image-box {
+  width: 100%;
+  height: 200px;
+  background: url("../assets/images/illustration-article.svg") center;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+.blog-preview-card__content-box {
+  margin-bottom: 25px;
+}
+.blog-preview-card__content-box .category {
+  background-color: hsl(47, 88%, 63%);
+  width: fit-content;
+  padding: 5px 9px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.blog-preview-card__content-box div + p {
+  font-weight: 500;
+  color: hsl(0, 0%, 7%);
+  font-size: 14px;
+}
+.blog-preview-card__content-box h2 ~ p {
+  color: hsl(0, 0%, 42%);
+  font-weight: 500;
+}
+.blog-preview-card__content-box .title {
+  margin-block: 10px;
+  pointer-events: visible;
+}
+.blog-preview-card__content-box .title:hover {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
+}
+.blog-preview-card__publisher {
+  display: flex;
+  align-items: center;
+}
+.blog-preview-card__publisher .circle {
+  background-image: url("../assets/images/image-avatar.webp");
+  background-size: contain;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.blog-preview-card__publisher b {
+  font-size: 14px;
+}
+.blog-preview-card b, .blog-preview-card h2 {
+  font-weight: 800;
+}
+
+body {
+  background-color: hsl(47, 88%, 63%);
+  padding-inline: 20px;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  user-select: none;
+}
